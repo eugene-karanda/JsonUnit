@@ -76,6 +76,10 @@ public class JsonAssert extends AbstractAssert<JsonAssert, Object> {
     JsonAssert(Object actual, Configuration configuration) {
         this(Path.create("", getPathPrefix(actual)), configuration, actual);
     }
+    
+    JsonAssert(Object actual) {
+        this(actual, Configuration.empty());
+    }
 
     /**
      * Moves comparison to given node. Second call navigates from the last position in the JSON.
